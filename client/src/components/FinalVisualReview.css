@@ -1,0 +1,64 @@
+/* =========================================================
+   FINAL VISUAL REVIEW — PASSAGE ILLUSTRATION
+   Dyslexia-Optimized, Centered, Full-Width Card, Max 600px Visual Aid
+   ========================================================= */
+
+.final-visual-review-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Illustration Container */
+.vj-small-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+}
+
+.vj-svg-illustration {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 540 / 165;
+  user-select: none;
+  border-width: 1px;
+  border-style: solid;
+  shape-rendering: geometricPrecision;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Fallback Card */
+.vj-fallback-box {
+  background-color: var(--bg-main);
+  border: 1px dashed var(--border-color);
+  border-radius: 0.75rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Save Button */
+.vj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.vj-btn:hover:not(:disabled) {
+  background-color: var(--card-hover);
+  border-color: var(--accent-color);
+}

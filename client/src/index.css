@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   DYSLEXIA-OPTIMIZED COLOR THEMES & CONTRAST MODES
+   Declared at root level for universal variable cascading
+   ========================================================= */
+
+:root,
+html,
+body,
+[data-theme="cream"],
+.theme-cream {
+  --bg-main: #FAF7EE;
+  --card-bg: #F3ECE0;
+  --card-hover: #EBE2D2;
+  --text-main: #24211D;
+  --text-muted: #5E5649;
+  --border-color: #DDD4BF;
+  --accent-color: #2D6A4F;
+  --accent-hover: #1E4D38;
+  --accent-text: #FFFFFF;
+  --flag-bg: #FEF08A;
+  --flag-border: #D97706;
+  --flag-text: #854D0E;
+  --input-bg: #FFFFFF;
+  --ruler-beam: rgba(254, 240, 138, 0.28);
+  --ruler-line: rgba(217, 119, 6, 0.7);
+}
+
+[data-theme="mint"],
+.theme-mint {
+  --bg-main: #EDF6F1;
+  --card-bg: #DDEEE5;
+  --card-hover: #D0E5DB;
+  --text-main: #0F241A;
+  --text-muted: #3D5A4C;
+  --border-color: #B9DACB;
+  --accent-color: #1B6344;
+  --accent-hover: #134B33;
+  --accent-text: #FFFFFF;
+  --flag-bg: #DCFCE7;
+  --flag-border: #16A34A;
+  --flag-text: #14532D;
+  --input-bg: #F7FCF9;
+  --ruler-beam: rgba(220, 252, 231, 0.35);
+  --ruler-line: rgba(22, 163, 74, 0.7);
+}
+
+[data-theme="lavender"],
+.theme-lavender {
+  --bg-main: #F5F3FA;
+  --card-bg: #EAE5F5;
+  --card-hover: #DFD8ED;
+  --text-main: #1D142B;
+  --text-muted: #534568;
+  --border-color: #D2C5EA;
+  --accent-color: #5E3D8F;
+  --accent-hover: #482C71;
+  --accent-text: #FFFFFF;
+  --flag-bg: #EDE9FE;
+  --flag-border: #7C3AED;
+  --flag-text: #4C1D95;
+  --input-bg: #FCFAFF;
+  --ruler-beam: rgba(237, 233, 254, 0.35);
+  --ruler-line: rgba(124, 58, 237, 0.7);
+}
+
+[data-theme="peach"],
+.theme-peach {
+  --bg-main: #FDF4EE;
+  --card-bg: #F8E5DA;
+  --card-hover: #F2D8C9;
+  --text-main: #2B150A;
+  --text-muted: #66412B;
+  --border-color: #EAC8B3;
+  --accent-color: #C2541A;
+  --accent-hover: #9E3F0F;
+  --accent-text: #FFFFFF;
+  --flag-bg: #FFEDD5;
+  --flag-border: #EA580C;
+  --flag-text: #9A3412;
+  --input-bg: #FFFDFB;
+  --ruler-beam: rgba(255, 237, 213, 0.35);
+  --ruler-line: rgba(234, 88, 12, 0.7);
+}
+
+[data-theme="paper"],
+.theme-paper {
+  --bg-main: #FBF9F4;
+  --card-bg: #F2ECE0;
+  --card-hover: #E7DFD0;
+  --text-main: #1A202C;
+  --text-muted: #4A5568;
+  --border-color: #D8D0BE;
+  --accent-color: #1D4ED8;
+  --accent-hover: #1E40AF;
+  --accent-text: #FFFFFF;
+  --flag-bg: #DBEAFE;
+  --flag-border: #2563EB;
+  --flag-text: #1E3A8A;
+  --input-bg: #FFFFFF;
+  --ruler-beam: rgba(219, 234, 254, 0.35);
+  --ruler-line: rgba(37, 99, 235, 0.7);
+}
+
+[data-theme="slate"],
+.theme-slate {
+  --bg-main: #131920;
+  --card-bg: #1C2530;
+  --card-hover: #263242;
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border-color: #2D3D4E;
+  --accent-color: #38BDF8;
+  --accent-hover: #0EA5E9;
+  --accent-text: #0F172A;
+  --flag-bg: #334155;
+  --flag-border: #FBBF24;
+  --flag-text: #FDE68A;
+  --input-bg: #161E28;
+  --ruler-beam: rgba(56, 189, 248, 0.18);
+  --ruler-line: rgba(56, 189, 248, 0.8);
+}
+
+[data-theme="high-contrast-dark"],
+.theme-high-contrast-dark {
+  --bg-main: #000000;
+  --card-bg: #121212;
+  --card-hover: #1E1E1E;
+  --text-main: #FFFF00;
+  --text-muted: #FFFF88;
+  --border-color: #FFFF00;
+  --accent-color: #00FFFF;
+  --accent-hover: #00CCCC;
+  --accent-text: #000000;
+  --flag-bg: #FFFF00;
+  --flag-border: #FFFFFF;
+  --flag-text: #000000;
+  --input-bg: #0A0A0A;
+  --ruler-beam: rgba(255, 255, 0, 0.22);
+  --ruler-line: #FFFF00;
+}
+
+[data-theme="high-contrast-light"],
+.theme-high-contrast-light {
+  --bg-main: #FFFFFF;
+  --card-bg: #F4F4F4;
+  --card-hover: #E8E8E8;
+  --text-main: #000000;
+  --text-muted: #222222;
+  --border-color: #000000;
+  --accent-color: #0000CC;
+  --accent-hover: #000088;
+  --accent-text: #FFFFFF;
+  --flag-bg: #FFE500;
+  --flag-border: #000000;
+  --flag-text: #000000;
+  --input-bg: #FFFFFF;
+  --ruler-beam: rgba(255, 229, 0, 0.3);
+  --ruler-line: #000000;
+}
+
+/* Contrast Enhancements */
+[data-contrast="high"] {
+  --border-color: #000000;
+}
+
+[data-contrast="high"][data-theme="slate"],
+[data-contrast="high"][data-theme="high-contrast-dark"] {
+  --border-color: #FFFFFF;
+}
+
+[data-contrast="soft"] {
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Global Root Styling */
+html, body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom Dyslexic Difficult Word Highlight */
+.difficult-word-badge {
+  background-color: var(--flag-bg) !important;
+  border-bottom: 2.5px solid var(--flag-border) !important;
+  color: var(--flag-text) !important;
+  border-radius: 4px;
+  padding: 0 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.15s ease;
+  font-weight: 700;
+}
+
+.difficult-word-badge:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+/* Active Highlight for TTS read-along */
+.tts-active-word {
+  background-color: #FEF08A !important;
+  color: #854D0E !important;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #FACC15;
+  transition: background-color 0.1s ease;
+}
+
+/* Bionic Reading Fixation Bolds */
+.bionic-fixation {
+  font-weight: 800 !important;
+  color: inherit;
+  opacity: 1;
+}
+
+/* Syllable hyphenation divider */
+.syllable-dot {
+  opacity: 0.6;
+  margin: 0 1.5px;
+  font-weight: bold;
+}
+
+/* Reading Ruler Mask Overlay */
+.reading-ruler-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 40;
+  transition: top 0.04s linear;
+}
+
+.reading-ruler-beam {
+  background-color: var(--ruler-beam);
+  border-top: 2px solid var(--ruler-line);
+  border-bottom: 2px solid var(--ruler-line);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.12);
+}
+

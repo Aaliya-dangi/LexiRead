@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dyslexia-reading-assistant
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: qwen/qwen3.8-27b
+      - key: JWT_SECRET
+        generateValue: true
